@@ -3,6 +3,7 @@ class GolfCourseSerializer < ActiveModel::Serializer
   has_one :city
 
   def comparison
-    "#{self.object.name} used #{(self.object.water_usage.to_i * 7)} gallons in the last week. That's #{self.object.crunch_numbers} worth of fresh water."
+    sample = Comparison.all.sample
+    "#{self.object.name} in #{self.object.city.name}, #{self.object.city.state} used #{(self.object.water_usage.to_i * 7)} in the last week. That's #{((self.object.water_usage.to_i * 7) / sample.volume)} #{sample.tidbit}."
   end
 end

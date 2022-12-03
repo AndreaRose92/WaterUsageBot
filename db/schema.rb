@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_03_171347) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_03_182855) do
   create_table "cities", force: :cascade do |t|
     t.string "name"
     t.string "state"
     t.integer "local_gov_phone"
     t.string "local_gov_email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comparisons", force: :cascade do |t|
+    t.string "object"
+    t.integer "volume"
+    t.string "tidbit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
