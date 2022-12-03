@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  state: MyString
+  local_gov_phone: 1
+  loval_gov_email: MyString
+
+two:
+  name: MyString
+  state: MyString
+  local_gov_phone: 1
+  loval_gov_email: MyString
