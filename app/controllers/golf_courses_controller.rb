@@ -7,6 +7,10 @@ class GolfCoursesController < ApplicationController
     render json: find_golf_course
   end
 
+  def random
+    render json: GolfCourse.all.sample
+  end
+
   def create
     course = find_golf_course
     if !course
@@ -28,7 +32,9 @@ class GolfCoursesController < ApplicationController
   private
 
   def find_city
-    City.find_by(name: params[:city_name], state: params[:city_state])
+    City.find_or_create_by(name: params[:city_name], state: params[:city_state]) do |new_city|
+      new_city.update(local_gov_phone: params[:phone], local_gov_email: params[:email])
+    end
   end
 
   def find_golf_course
