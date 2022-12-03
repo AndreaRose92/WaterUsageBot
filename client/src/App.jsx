@@ -7,14 +7,15 @@ import Navigation from './components/navigation/Navigation';
 
 function App() {
   return (
-    <>
-      <Navigation />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path='/about' element={<About />} />
-      </Routes>
-    </>
-  );
+  <>
+    <Navigation />
+    <Routes>
+      <Route index element={<Home />} />
+      <Route path='/about' element={<About />} />
+    </Routes>
+  </>
+  )
 }
-
 export default App;
+
+
