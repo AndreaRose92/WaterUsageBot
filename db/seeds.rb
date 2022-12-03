@@ -1,7 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+concord = City.create(name: "Concord", state: "California", local_gov_phone: 9256713158, local_gov_email: "citycouncil@cityofconcord.org")
+GolfCourse.create(name: "Buchanan Fields Golf Club", water_usage: 1650000, city: concord)
+GolfCourse.create(name: "Diablo Creek Golf Course", water_usage: 2730000, city: concord)

@@ -1,3 +1,3 @@
 class CitySerializer < ActiveModel::Serializer
-  attributes :id, :name, :state, :local_gov_phone, :loval_gov_email
+  attributes :name, :state, :local_gov_phone, :local_gov_email
 end
