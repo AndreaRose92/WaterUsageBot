@@ -26,8 +26,15 @@ const Form = () => {
     //   body: JSON.stringify(formData)
     // })
 
+    console.log('I sent your data someplace!')
+    e.target.reset()
+    setFormData({
+      potato: '',
+      funstuff: '',
+      somethingelse: ''
+    })
   }
-  
+
   return (
     <form className='w-96' onSubmit={handleSubmit}>
       <div className="relative z-0 mb-6 w-full group">
