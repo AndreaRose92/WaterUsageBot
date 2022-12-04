@@ -46,7 +46,7 @@ export default function Navigation() {
                         key={item.name}
                         to={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-blue-800 hover:text-white',
                           'px-3 py-2 rounded-md text-lg font-semibold'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -68,7 +68,7 @@ export default function Navigation() {
                   as="a"
                   to={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-blue-800 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
