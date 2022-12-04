@@ -15,16 +15,13 @@ scheduler = Rufus::Scheduler.new
 
 scheduler.every "5s" do
   golf_course = JSON.parse(RestClient.get("localhost:3000/random"))
-  toot = client.create_status(golf_course["comparison"])
-  scheduler.in "5s" do
-    # reply = client.create_status(
-    #   "Local Govt Contact Info:\n
-    #   Phone: #{golf_course["city"]["local_gov_phone"]}\n
-    #   Email: #{golf_course["city"]["local_gov_email"]}",
-    #   params = { in_reply_to_id: JSON.parse(RestClient.get("#{account}/statuses")).last.id }
-    # )
-  end
+  toot = client.create_status(
+    "#{golf_course["comparison"]}\n
+  Local Govt Contact Info:
+    Phone: #{golf_course["city"]["local_gov_phone"]}
+    Email: #{golf_course["city"]["local_gov_email"]}
+    "
+  )
 end
 
 scheduler.join
-# client.create_status("I'm a little test post.")
