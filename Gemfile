@@ -37,4 +37,4 @@ gem "json", "~> 2.6"
 
 gem "rest-client", "~> 2.1"
 
-gem 'mastodon-api', require: 'mastodon'
+gem 'mastodon-api'
