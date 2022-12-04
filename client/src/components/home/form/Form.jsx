@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const Form = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    courseName: '',
     waterUsage: '',
     cityName: '',
     cityState: '',
@@ -16,8 +16,6 @@ const Form = () => {
     setFormData(data)
   }
 
-  console.log(formData)
-
   const handleSubmit = (e) => {
     e.preventDefault()    
 
@@ -27,7 +25,7 @@ const Form = () => {
         'Content-Type': "application/json"
       },
       body: JSON.stringify({
-        name: formData.name,
+        courseName: formData.courseName,
         water_usage: formData.waterUsage,
         city_name: formData.cityName,
         city_state: formData.cityState,
@@ -35,11 +33,10 @@ const Form = () => {
         email: formData.email
       })
     })
-
-    console.log('I sent your data someplace!')
+    
     e.target.reset()
     setFormData({
-      name: '',
+      courseName: '',
       waterUsage: '',
       cityName: '',
       cityState: '',
@@ -49,15 +46,15 @@ const Form = () => {
   }
 
   return (
-    <div className="container flex flex-col w-11/12 mx-auto bg-blue-200 rounded-xl shadow border-black p-6 m-10 place-items-center">
+    <div className="container flex flex-col w-11/12 mx-auto bg-blue-200 rounded-xl shadow border-black py-12 m-12 place-items-center">
       <p className="text-3xl text-gray-700 font-bold mb-5">
         Enter New Data
       </p>
-      <div>
+      <div className='p-2 h-fit md:h-max w-auto whitespace-nowrap overflow-auto md:overflow-none scrollbar-hide'>
         <form className='w-auto' onSubmit={handleSubmit}>
           <div className="relative z-0 mb-6 w-full group">
-            <input type="text" name="name" id="name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required onChange={handleChange}/>
-            <label htmlFor="name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Golf Course</label>
+            <input type="text" name="courseName" id="courseName" className="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required onChange={handleChange}/>
+            <label htmlFor="courseName" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Golf Course</label>
           </div>
           <div className="relative z-0 mb-6 w-full group">
             <input type="number" name="waterUsage" id="waterUsage" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required onChange={handleChange}/>
