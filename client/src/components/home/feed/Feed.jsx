@@ -2,7 +2,7 @@ import React from 'react'
 
 const Feed = () => {
   return (
-    <div className="container flex flex-col w-11/12 mx-auto bg-blue-200 rounded-xl shadow border-black md:py-12 m-12 place-items-center p-4 h-full md:h-5/6">
+    <div className="container flex flex-col w-11/12 mx-auto bg-sky-400 rounded-xl shadow border-black md:py-12 m-12 place-items-center p-4 h-full md:h-5/6">
       <p className="text-3xl text-gray-700 font-bold mb-5">
         Bot Feed
         </p>
