@@ -27,6 +27,6 @@ class CitiesController < ApplicationController
   end
 
   def city_params
-    params.permit(:name, :state, :local_gov_phone, :loval_gov_email)
+    params.permit(:name, :state, :local_gov_phone, :local_gov_email)
   end
 end
