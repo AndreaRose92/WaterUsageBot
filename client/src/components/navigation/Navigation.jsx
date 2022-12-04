@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { NavLink } from 'react-router-dom'
-import logo from "../../logo/logo.png"
+import logo from "../../assets/logo.png"
 import { useState } from 'react'
 
 
@@ -12,12 +12,9 @@ const navigation = [
   { name: 'About', href: '/about', current: false },
 ]
 
-
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
 
 export default function Navigation() {
   return (
