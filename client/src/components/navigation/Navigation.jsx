@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { NavLink } from 'react-router-dom'
-import logo from "../../assets/logo.png"
+import logo from "../../assets/teedlogo.png"
 import { useState } from 'react'
 
 
