@@ -17,7 +17,7 @@ scheduler.every "5s" do
   golf_course = JSON.parse(RestClient.get("localhost:3000/random"))
   toot = client.create_status(
     "#{golf_course["comparison"]}\n
-  Local Govt Contact Info:
+  Contact Local Govt to call for water usage regulations.
     Phone: #{golf_course["city"]["local_gov_phone"]}
     Email: #{golf_course["city"]["local_gov_email"]}
     "
