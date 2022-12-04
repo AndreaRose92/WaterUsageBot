@@ -20,24 +20,22 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault()    
 
-    // fetch('/golf_courses', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': "application/json"
-    //   },
-    //   body: JSON.stringify({
-    //     course_name: formData.courseName,
-    //     water_usage: formData.waterUsage,
-    //     sourceLink: formData.sourceLink,
-    //     city_name: formData.cityName,
-    //     city_state: formData.cityState,
-    //     phone: formData.phone,
-    //     email: formData.email
-    //   })
-    // })
+    fetch('/golf_courses', {
+      method: 'POST',
+      headers: {
+        'Content-Type': "application/json"
+      },
+      body: JSON.stringify({
+        course_name: formData.courseName,
+        water_usage: formData.waterUsage,
+        sourceLink: formData.sourceLink,
+        city_name: formData.cityName,
+        city_state: formData.cityState,
+        phone: formData.phone,
+        email: formData.email
+      })
+    })
     
-    console.log(formData)
-
     e.target.reset()
     setFormData({
       courseName: '',
@@ -51,7 +49,7 @@ const Form = () => {
   }
 
   return (
-    <div className="container flex flex-col w-11/12 mx-auto bg-blue-200 rounded-xl shadow border-black py-12 m-12 place-items-center">
+    <div className="container flex flex-col w-11/12 mx-auto bg-blue-200 rounded-xl shadow border-black py-12 m-12 place-items-center h-max md:h-5/6">
       <p className="text-3xl text-gray-700 font-bold mb-5">
         Enter New Data
       </p>
