@@ -4,9 +4,9 @@ GolfCourse.create(name: "Diablo Creek Golf Course", water_usage: 2730000, city: 
 
 Comparison.create(object: "Olympic swimming pool", volume: 660000, tidbit: "olympic pool(s) worth of water")
 Comparison.create(object: "Bathtub", volume: 80, tidbit: "bathtub(s) worth of water")
-Comparison.create(object: "US Coffee per day", volume: 40000000, tidbit: "days(s) of US coffee consumption worth of water")
-Comparison.create(object: "Person Coffee per year", volume: 113, tidbit: "years(s) of average American's coffee consumption worth of water")
-Comparison.create(object: "Water Tower", volume: 1000000, tidbit: "water towers(s) worth of water")
+Comparison.create(object: "US Coffee per day", volume: 40000000, tidbit: "day(s) of US coffee consumption worth of water")
+Comparison.create(object: "Person Coffee per year", volume: 113, tidbit: "year(s) of average American's coffee consumption worth of water")
+Comparison.create(object: "Water Tower", volume: 1000000, tidbit: "water tower(s) worth of water")
 Comparison.create(object: "Home Water Heater", volume: 60, tidbit: "average home water heater(s) worth of water")
 Comparison.create(object: "Ocean Tank", volume: 200000, tidbit: "NE Aquarium Ocean Tank(s) worth of water")
 Comparison.create(object: "Oil Barrel", volume: 42, tidbit: "oil barrel(s) worth of water")
